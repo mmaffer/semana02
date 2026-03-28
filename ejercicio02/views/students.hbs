@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+    <h1>Lista de Estudiantes y Notas</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Nota</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each students}}
+            <tr {{#if this.esAlta}}style="background-color: #d4edda;"{{/if}}>
+                <td>{{this.nombre}}</td>
+                <td>{{this.nota}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    
+    <br>
+    <a href="/">Volver al Inicio</a>
+</body>
+</html>
